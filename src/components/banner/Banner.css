@@ -1,0 +1,5 @@
+.banner{
+    background-color: bisque;
+    width: 100%;
+    height: 30vh; /* Altura de 100% da viewport */
+}
