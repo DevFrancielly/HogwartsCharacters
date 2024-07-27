@@ -12,14 +12,19 @@ const Forms = () => {
         "Lufa-Lufa"
     ]
 
+    const whenSaving = (evento) => {
+        evento.preventDefault()
+        console.log("foi carai")
+    }
+
     return(
         <section className='form'>
-            <form>
+            <form onSubmit={whenSaving}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <TextField label="Nome" placeholder="Digite seu nome"/>
-                <TextField label="Cargo" placeholder="Digite seu cargo"/>
+                <TextField obrigatorio={true} label="Nome" placeholder="Digite seu nome"/>
+                <TextField obrigatorio={true} label="Cargo" placeholder="Digite seu cargo"/>
                 <TextField label="Imagem" placeholder="Informe o endereço da imagem"/>
-                <DropdownList label="Casa" itens={hogwartsHouses}/>
+                <DropdownList obrigatorio={true} label="Casa" itens={hogwartsHouses}/>
                 <Button>
                     Criar card
                 </Button>
